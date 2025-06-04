@@ -33,12 +33,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Blog
               </Link>
+
               <Link
-                href="/categories"
+                href="/comments"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
-                Categories
+                Comments
               </Link>
+
+
             </div>
           </div>
         </nav>
