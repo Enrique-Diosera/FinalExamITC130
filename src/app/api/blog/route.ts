@@ -1,7 +1,11 @@
+// app/api/blog/route.ts
+
 import { NextResponse } from 'next/server';
 import { BlogPost } from '@/types/blog';
 
-let blogPosts: BlogPost[] = [];
+(globalThis as any).blogPosts = (globalThis as any).blogPosts || [];
+
+const blogPosts: BlogPost[] = (globalThis as any).blogPosts;
 
 export async function GET() {
   return NextResponse.json(blogPosts);
